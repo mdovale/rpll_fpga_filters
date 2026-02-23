@@ -20,7 +20,6 @@ This folder is intentionally scoped to filter work only. It is a place to protot
 - `tb/cic_n2_gen_trunc_tb.vhd`: starter testbench.
 - `docs/INTERFACE_CONTRACT.md`: module boundary and required behavior.
 - `docs/TEST_SPEC.md`: required verification matrix.
-- `docs/HANDOFF_WORKFLOW.md`: integration and review flow.
 
 ## Recommended toolchain
 
@@ -35,7 +34,7 @@ This folder is intentionally scoped to filter work only. It is a place to protot
 
 ## Quick start
 
-From `rpll_fpga_cic/`:
+From `rpll_fpga_filters/`:
 
 ```bash
 ghdl -a --std=08 -fsynopsys \
