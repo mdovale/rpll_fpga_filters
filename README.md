@@ -80,7 +80,6 @@ ghdl -r --std=08 -fsynopsys cic_n2_gen_trunc_tb --stop-time=20us
 
 7. Compare candidates with evidence
 - For each architecture, report: spectral performance, latency, complexity, and synthesis impact.
-- Select the best tradeoff for the target operating point.
 
 ## Architecture notes
 
@@ -118,7 +117,7 @@ ghdl -r --std=08 -fsynopsys cic_n2_gen_trunc_tb --stop-time=20us
 
 ## Success criteria for proposed designs
 
-- Meets spectral requirements (ripple, attenuation, alias control).
+- Spectral behaviour improves baseline.
 - Meets throughput/latency constraints.
 - Meets fixed-point robustness targets (no unintended overflow/instability).
 - Maintains contract compliance (`docs/INTERFACE_CONTRACT.md`).

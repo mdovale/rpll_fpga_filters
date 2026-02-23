@@ -5,7 +5,6 @@ This document defines required verification for filter designs.
 ## Verification goals
 
 - Preserve interface compatibility of `CIC_N2_GEN_TRUNC`.
-- Preserve decimation/update semantics (`Qout` updates only on slow strobe).
 - Preserve signed arithmetic behavior under realistic and corner-case stimuli.
 - Ensure reset behavior is deterministic.
 
@@ -44,7 +43,7 @@ This document defines required verification for filter designs.
 
 ## Acceptance criteria
 
-- No interface changes without explicit approval.
+- No interface changes, unless strictly necessary and approved.
 - No `U/X/Z` at `Qout` after reset deassertion.
 - Gating rule holds for all tests: `Clock_Slow='0' => Qout stable`.
 - Baseline regression vectors remain within agreed tolerance (prefer bit-exact for deterministic tests).
@@ -52,5 +51,5 @@ This document defines required verification for filter designs.
 ## Deliverables per change
 
 - Updated VHDL source.
-- Test evidence (logs/wave snapshots).
+- Test evidence.
 - Short note documenting numerical impact and any changed assumptions.
