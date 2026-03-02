@@ -1,0 +1,47 @@
+# GHDL simulation artifacts
+work-obj*.cf
+*.o
+*.e
+*.vcd
+*.ghw
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Vivado (optional synthesis)
+.Xil/
+*.jou
+*.log
+*.str
+*.wdb
+*.wcfg
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.xpr.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+*.swp
+*.swo
+*~
