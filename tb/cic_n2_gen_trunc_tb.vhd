@@ -43,6 +43,25 @@ begin
     wait for 8*C_CLK_PER;
     reset <= '0';
 
+    -- Run reset behavior test.
+    while i < 4096 loop
+      
+      -- DC input
+      sample := to_signed(1, C_IN_BIT);
+      data_in <= std_logic_vector(sample);
+
+      i := i + 1;
+    end loop;
+    
+    reset <= '1';
+    wait for 8*C_CLK_PER;
+    reset <= '0';
+
+    wait until rising_edge(clk);
+    assert qout = std_logic_vector(to_unsigned(0, C_OUT_BIT))
+      report "Qout not zero after reset"
+      severity failure;
+
     -- Run deterministic stimulus for quick smoke/regression testing.
     while i < 4096 loop
       wait until rising_edge(clk);
