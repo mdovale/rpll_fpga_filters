@@ -4,10 +4,10 @@ use IEEE.NUMERIC_STD.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
-entity impulse_tb is
-end impulse_tb;
+entity full_scale_tb is
+end full_scale_tb;
 
-architecture tb of impulse_tb is
+architecture tb of full_scale_tb is
   constant C_IN_BIT   : positive := 12;
   constant C_OUT_BIT  : positive := 16;
   constant C_OUT_RATE : positive := 4;
@@ -21,8 +21,8 @@ architecture tb of impulse_tb is
   signal data_in    : std_logic_vector(C_IN_BIT-1 downto 0) := (others => '0');
   signal qout       : std_logic_vector(C_OUT_BIT-1 downto 0);
 
-  file infile : text open read_mode is "tb_in/impulse_input.dat";
-  file outfile : text open write_mode is "tb/tb_out/impulse_output.dat";
+  file infile : text open read_mode is "tb_in/full_scale_input.dat";
+  file outfile : text open write_mode is "tb/tb_out/full_scale_output.dat";
 
 begin
   uut : entity work.CIC_N2_GEN_TRUNC

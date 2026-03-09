@@ -21,8 +21,8 @@ architecture tb of sinusoid_tb is
   signal data_in    : std_logic_vector(C_IN_BIT-1 downto 0) := (others => '0');
   signal qout       : std_logic_vector(C_OUT_BIT-1 downto 0);
 
-  file infile : text open read_mode is "sinusoid_input.dat";
-  file outfile : text open write_mode is "sinusoid_output.dat";
+  file infile : text open read_mode is "tb_in/sinusoid_input.dat";
+  file outfile : text open write_mode is "tb/tb_out/sinusoid_output.dat";
 
 begin
   uut : entity work.CIC_N2_GEN_TRUNC
